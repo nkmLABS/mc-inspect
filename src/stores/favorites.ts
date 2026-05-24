@@ -9,8 +9,8 @@ export const useFavoritesStore = defineStore('favorites', () => {
   const favoritePlayers = computed<FavoritePlayer[]>(() => favorites.value.filter((e): e is FavoritePlayer => e.meta.type === 'player'));
   const favoriteServers = computed<FavoriteServer[]>(() => favorites.value.filter((e): e is FavoriteServer => e.meta.type === 'server'));
 
-  const maxFavoritePlayers = 10;
-  const maxFavoriteServers = 10;
+  const maxFavoritePlayers = 12;
+  const maxFavoriteServers = 12;
 
   const atFavoritePlayersLimit = computed<boolean>(() => favoritePlayers.value.length >= maxFavoritePlayers);
   const atFavoriteServersLimit = computed<boolean>(() => favoriteServers.value.length >= maxFavoriteServers);

@@ -83,7 +83,7 @@ const currentPlayer = computed<FavoritePlayer | null>(() => {
 
               <div class="grid grid-cols-[auto_1fr] items-center gap-4">
                 <CopyButton :text="data[key]" class="btn-reverse w-20" />
-                <p class="overflow-hidden border-l-2 border-slate-400 pl-4 text-nowrap text-ellipsis dark:border-slate-600">{{ data[key] }}</p>
+                <p class="overflow-scroll border-l-2 border-slate-400 pl-4 text-nowrap text-ellipsis dark:border-slate-600">{{ data[key] }}</p>
               </div>
             </div>
           </template>
@@ -95,7 +95,7 @@ const currentPlayer = computed<FavoritePlayer | null>(() => {
             <div v-if="data[key]" class="grid items-center gap-y-4 border-slate-400 py-4 not-last:border-b-2 dark:border-slate-600">
               <CopyButton :text="data[key]" class="btn-reverse w-20 justify-self-start [grid-area:1/1]" />
               <p class="justify-self-center font-mono text-xl [grid-area:1/1]">{{ playerInfo.label }}</p>
-              <p class="overflow-hidden border-l-2 border-slate-400 pl-2 text-nowrap text-ellipsis [grid-area:2/1] dark:border-slate-600">
+              <p class="overflow-scroll border-l-2 border-slate-400 pl-2 text-nowrap text-ellipsis [grid-area:2/1] dark:border-slate-600">
                 {{ data[key] }}
               </p>
             </div>

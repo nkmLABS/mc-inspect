@@ -39,22 +39,26 @@ const cards = {
   <section class="mt-8 mb-6 flex flex-col items-center gap-4 sm:mt-16 sm:mb-12">
     <h1 class="font-sans text-4xl font-bold">MC-Inspect</h1>
 
-    <div class="flex w-full max-w-lg flex-col items-center gap-4 rounded-2xl border-2 border-accent p-4 shadow-center-md shadow-accent">
-      <div class="text-center">
-        <p>Welcome to MC-Inspect! A Minecraft player and server inspection web application.</p>
-      </div>
+    <div class="w-full max-w-md text-center">
+      <p>Welcome to MC-Inspect! A Minecraft player and server inspection web application.</p>
     </div>
   </section>
 
   <hr class="h-0.5 w-full bg-slate-400 text-slate-400 dark:bg-slate-600 dark:text-slate-600" />
 
-  <section class="mt-8 flex flex-col items-center gap-4 sm:mt-16">
+  <section class="mt-8 flex flex-col items-center gap-2 sm:mt-16 sm:gap-4">
     <h2 class="font-sans text-2xl font-bold">About the project</h2>
-    <p class="max-w-3xl text-center text-balance sm:text-justify sm:text-wrap">
-      MC-Inspect lets you lookup various information about Minecraft players and servers. It is developed by nkmLABS as a learning exercise and now
-      deployed as demo project for you to use. I (nkmLABS) build this web application to understand how to use different web technologies and tools.
-      Especially, I acquired knowledge of:
-    </p>
+
+    <div
+      class="w-full max-w-3xl rounded-2xl border-2 border-accent p-4 text-center text-balance hover-smooth hover:shadow-center-md hover:shadow-accent sm:p-8 sm:text-justify sm:text-wrap"
+    >
+      <p>
+        MC-Inspect lets you lookup various information about Minecraft players and servers. It is developed by nkmLABS as a learning exercise and now
+        deployed as demo project for you to use. I (nkmLABS) build this web application to understand how to use different web technologies and tools.
+        Especially, I acquired <span class="text-nowrap">knowledge of:</span>
+      </p>
+    </div>
+
     <div class="grid w-full max-w-3xl auto-rows-fr grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-4">
       <a
         v-for="(card, key) in cards"
